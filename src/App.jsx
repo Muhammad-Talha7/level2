@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 
 function App() {
 
@@ -30,6 +30,11 @@ function App() {
 const decrement = ()=>{
   setCount((count)=> (count +1 )%images.length)
 }
+
+useEffect(() => {
+  alert("Level ho gya!")
+}, [Count])
+
   return (
  <>
 
